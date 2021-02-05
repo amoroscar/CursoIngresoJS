@@ -1,7 +1,7 @@
 /*
 Amor Oscar
 
-Ejercicio 10 Bis
+Ejercicio 10 Bis Corregido (el anterior me daba NaN)
 Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
 mostrar el importe con un Descuento del 25 %
@@ -17,7 +17,7 @@ function mostrarAumento()
 	var importeConDescuento;
 	
 	importe= document. getElementById('txtIdImporte'). value;
-	descuentoIngresado= prompt ("Ingrese descuento a realizar:"). value;
+	descuentoIngresado= prompt ("Ingrese descuento a realizar:");
 	
 	
 	descuentoIngresado= parseInt (descuentoIngresado);
