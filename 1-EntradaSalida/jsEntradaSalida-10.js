@@ -16,15 +16,15 @@ function mostrarAumento()
 	var descuentoIngresado;
 	var importeConDescuento;
 	
-
-	descuentoIngresado= prompt ("Ingrese descuento a realizar:"). value;
 	importe= document. getElementById('txtIdImporte'). value;
+	descuentoIngresado= prompt ("Ingrese descuento a realizar:"). value;
 	
-	descuentoIngresado=parseInt(descuentoIngresado);
-	importe=parseInt(importe);
+	
+	descuentoIngresado= parseInt (descuentoIngresado);
+	importe= parseInt (importe);
 
 	descuento= importe*descuentoIngresado/100;
-	importeConDescuento=importe- descuento;
+	importeConDescuento=importe - descuento;
 
 	document. getElementById('txtIdResultado'). value= importeConDescuento;
 }
