@@ -4,8 +4,12 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	var nombreIngresado;
-	nombreIngresado=txtIdNombre.value;
-	alert("ok");
+
+	//nombreIngresado=txtIdNombre.value;
+   	 //nombreIngresado=document.getElementById('txtIdNombre').value;
+	nombreIngresado=document.getElementById('txtIdNombre').value; //toma el valor de la variable
+	alert(nombreIngresado);
+
 
 }
 
