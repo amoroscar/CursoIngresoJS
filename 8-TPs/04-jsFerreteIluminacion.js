@@ -1,6 +1,7 @@
 /*4.	
 Amor Oscar
-IF TP 04 Final
+Ferrete iluminancion Con if (cantidad) switch (marca)
+
 
 Para el departamento de iluminación:
 Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.
@@ -28,62 +29,66 @@ function CalcularPrecio ()
 	precio=cantidad*35;
 
 	marca= document. getElementById('Marca').value;
-	
-	if (cantidad>5)
-	{
+
+	if (cantidad>5) 
+	{	
 		descuento=50;
 	}
 	else
 	{
 		if (cantidad==5)
-		{
-			if (marca="ArgentinaLuz")
-			{
-				descuento=40;
-			}
-			else
-			{
-				descuento=30;
-			}
-		}
-		if (cantidad==4)
-		{
-			if (marca=="ArgentinaLuz"||marca=="FelipeLamparas")
-			{
-				descuento=25;
-			}
-			else
-			{
-				descuento=20;
-			}
-		}
-		if (cantidad==3)
-		{
-			if (marca=="ArgentinaLuz")
-			{
-				descuento=15;
-			}
-			else
-			{
-				if (marca=="FelipeLamparas")
-				{
-					descuento=10;
-				}
-				else
-				{
-					descuento=5;
-				}
-			}
-		}
-		else
-		{
-			descuento=0;
-		}
-
+		 {
+		 	switch(marca)
+		 	{
+		 		case "ArgentinaLuz":
+		 			descuento=40;
+		 			break;
+		 		default:
+		 			descuento=30;
+		 			break;
+		 	}
+		 }
+		 else
+		 {
+		 	if (cantidad==4)
+		 	 {
+		 	 	switch(marca)
+		 	 	{
+		 	 		case "ArgentinaLuz":
+		 	 		case "FelipeLamparas":
+		 	 			descuento=25;
+		 	 			break;
+		 	 		default:
+		 	 			descuento=20;
+		 	 			break;
+		 	 	}
+		 	 }
+		 	 else
+		 	 {
+		 	 	if (cantidad==3)
+		 	 	 {
+		 	 	 	switch(marca)
+		 	 	 	{
+		 	 	 		case "ArgentinaLuz":
+		 	 	 			descuento=15;
+		 	 	 			break;
+		 	 	 		case "FelipeLamparas":
+		 	 	 			descuento=10;
+		 	 	 			break;
+		 	 	 		default:
+		 	 	 			descuento=5;
+		 	 	 			break;
+		 	 	 	}
+		 	 	 }
+		 	 	 else
+		 	 	 {
+		 	 	 	descuento=0;
+		 	 	 }
+		 	 }
+		 }
 	}
 
 	precio=precio-(precio*descuento/100);
-
 
 	if (precio>120)
 	{
@@ -93,5 +98,8 @@ function CalcularPrecio ()
 	}
 
 	document. getElementById('txtIdprecioDescuento'). value= precio;
-}
+}	
 
+
+
+	
